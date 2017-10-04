@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 style="color:#5aa0de;"><b>Moje zamówienia:</b></h2>
+    <table class="table table-hover" style="background-color:white; border-radius: 10px;">
+        <thead>
+        <tr>
+            <th>Nazwa:</th>
+            <th>Sektor:</th>
+            <th>Data wydarzenia:</th>
+            <th>Cena:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  ng-repeat="reservation in reservations" ts-repeat>
+            <td>{{reservation.nameReservation}}</td>
+            <td>{{reservation.sector}}</td>
+            <td>{{reservation.event.date | date:'dd/MM/yyyy'}}</td>
+            <td>{{reservation.price}}</td>
+
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

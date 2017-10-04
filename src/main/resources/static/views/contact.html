@@ -1,0 +1,24 @@
+<div class="container" style="border-radius: 25px; background-color: #bbc0a7; padding-bottom: 20px; width:50%;">
+    <div class="page-header">
+        <h2>Skontaktuj się z administratorem</h2>
+    </div>
+
+    <form class="col-md-6 col-md-offset-3" role="form" ng-submit="registerNote()">
+        <div class="form-group">
+            <label>Temat:</label>
+            <input type="text" name="title" id="title" class="form-control" ng-model="notetitle" required>
+        </div>
+        <div class="form-group">
+            <label>Treść:</label>
+            <textarea name="text" id="text" class="form-control" rows="10" style="resize: none;" ng-model="notetext" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger btn-block" value="Wyślij wiadomość" required>
+
+        </div>
+    </form>
+</div>
+
+<!--
+
+-->

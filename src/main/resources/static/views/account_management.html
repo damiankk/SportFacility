@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 style="color:#5aa0de;"><b>Zmień uprawnienia użytkownika:</b></h2>
+    <table class="table table-hover" style="background-color:white; border-radius: 10px;">
+        <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Nick użytkownika</th>
+            <th>E-mail</th>
+            <th>Uprawnienia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  ng-repeat="account in accounts" ts-repeat>
+            <td>{{account.name}}</td>
+            <td>{{account.surname}}</td>
+            <td>{{account.username}}</td>
+            <td>{{account.email}}</td>
+
+            <td>
+                <form role="form">
+                    <select ng-model="roleUser">
+                        <option >userrole</option>
+                        <option >USER</option>
+                        <option >WORKER</option>
+                        <option >ADMIN</option>
+                    </select>
+
+                    <input type="submit" class="btn btn-info btn-xs" value="Zmień rolę" ng-click="changeRole(account,roleUser)">
+                    <input type="submit" class="btn btn-info btn-xs" value="Usuń" ng-click="delete(account)">
+
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

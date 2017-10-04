@@ -1,0 +1,42 @@
+<div class="container"
+     style="border-radius: 25px; background-color: #bbb0a7; padding-bottom: 20px; margin-bottom:50px; width:50%;">
+    <div class="page-header">
+        <h2 style="text-align: center;">Rezerwacja</h2>
+    </div>
+
+    <form class="col-md-6 col-md-offset-3" role="form" ng-submit="reservation()">
+        <div class="form-group">
+            <label><b style="color:blue;">Nazwa wydarzenia:</b> {{name}}</label>
+        </div>
+        <div class="form-group">
+            <label><b style="color:blue;">Wolnych miejsc:</b> {{freeTicket}}</label>
+        </div>
+        <div class="form-group">
+            <label><b  style="color:blue;">Data i godzina:</b>{{date | date:'dd/MM/yyyy'}}r.</label>
+        </div>
+
+        <label for="sel1">Wybierz sektor:</label>
+        <select class="form-control" id="sel1" ng-model="sector">
+            <option value="1">Trybuna główna:<span style="color:red">{{first}} szt.(wolnych miejsc)</span></option>
+            <option value="2">Za bramką:<span style="color:red">{{second}} szt.(wolnych miejsc)</span></option>
+            <option value="3">W rogu stadionu:<span style="color:red">{{third}} szt.(wolnych miejsc)</span></option>
+            <option value="4">Stojące:<span style="color:red">{{fourth}} szt.(wolnych miejsc)</span></option>
+        </select>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label>Ilość miejsc:</label>
+                <input type="number" name="title" id="pieces" class="form-control" required ng-model="pieces">
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label>Cena:{{price}}</label>
+                </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger btn-block" value="Zatwierdź" required>
+        </div>
+        </div>
+    </form>
+
+
+</div>

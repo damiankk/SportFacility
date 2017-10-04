@@ -1,0 +1,65 @@
+<div class="container"
+     style="border-radius: 25px; background-color: #bbb0a7; padding-bottom: 20px; margin-bottom:50px; width:50%;">
+    <div class="page-header">
+        <h2>Dodaj wydarzenie</h2>
+    </div>
+
+
+    <form class="col-md-6 col-md-offset-3" role="form" ng-submit="registerEvent()">
+        <div class="form-group">
+            <label>Nazwa:</label>
+            <input type="text" name="title" id="title" class="form-control" required ng-model="name">
+        </div>
+        <div class="form-group">
+            <label>Url:</label>
+            <input type="text" name="title" id="url" class="form-control" required ng-model="url">
+        </div>
+        <div class="form-group">
+            <label>Data i godzina:</label>
+            <input type="date" required ng-model="date">
+        </div>
+        <div class="form-group">
+            <label>Opis:</label>
+            <textarea name="text" id="text" class="form-control" rows="5" style="resize: none;"
+                      ng-model="description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="sel1">Typ:</label>
+            <select class="form-control" id="sel1" ng-model="type">
+                <option>Artystyczne</option>
+                <option>Sportowe</option>
+                <option>Kulturalne</option>
+                <option>Religijne</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label>Trybuna główna:</label>
+                <input type="number" name="title" id="first" class="form-control" required ng-model="first">
+            </div>
+            <div class="form-group">
+                <label>Za bramką:</label>
+                <input type="number" name="title" id="second" class="form-control" required ng-model="second">
+            </div>
+            <div class="form-group">
+                <label>W rogu stadionu:</label>
+                <input type="number" name="title" id="third" class="form-control" required ng-model="third">
+            </div>
+            <div class="form-group">
+                <label>Stojące:</label>
+                <input type="number" name="title" id="fourth" class="form-control" required ng-model="fourth">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Cena:</label>
+            <input type="number" required ng-model="price">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger btn-block" value="Dodaj" required>
+        </div>
+    </form>
+
+
+</div>

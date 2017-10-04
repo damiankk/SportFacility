@@ -1,0 +1,80 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form role="form" ng-controller="RegisterCtrl" ng-submit="registerUser()">
+                <h2>Zarejestruj się <small>Zgarniaj bonusy!</small></h2>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="firstname" id="firstname" class="form-control input-lg" placeholder="Imię" tabindex="1" ng-model="register.name" required/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="lastname" id="lastname" class="form-control input-lg" placeholder="Nazwisko" tabindex="2" ng-model="register.surname" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="username" id="username" class="form-control input-lg" placeholder="Nick, który będzie widoczny dla innych użytkowników" tabindex="3" ng-model="register.username" required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="E-mail" tabindex="4" ng-model="register.email" required/>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Hasło" ng-model="register.password" tabindex="5" required/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" ng-model="register.password_confirmation" placeholder="Potwierdź hasło" tabindex="6"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="address" id="address" class="form-control input-lg" placeholder="Adres zamieszkania" tabindex="7" ng-model="register.address" required/>
+                </div>
+
+                <hr class="colorgraph">
+                <div class="row" style="color: white; font-size: 20px;">
+
+                    <div class="col-xs-12 col-md-12">
+                        <b>Klikając <strong class="label label-primary">Zarejestruj</strong>, akceptujesz <u><a href="#" data-toggle="modal" data-target="#t_and_c_m" style="color: purple;">Regulamin</a></u> strony oraz politykę cookies.</b>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12"><input type="submit" value="Zarejestruj" class="btn btn-primary btn-block btn-lg" tabindex="7"/></div>
+                    <!--<input class="col-xs-12 col-md-12" type="submit" value="Zarejestruj">-->
+                </div>
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12"><a href="index.html" class="btn btn-danger btn-block" tabindex="7">Wróć do strony głównej</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Regulamin</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Regulamin Obiektu sportowego </p>
+                    <p>Regulamin Obiektu sportowego Regulamin Obiektu sportowego Regulamin Obiektu sportowego Regulamin Obiektu sportowego </p>
+                    <p>Regulamin Obiektu sportowego Regulamin Obiektu sportowego Regulamin Obiektu sportowego Regulamin Obiektu sportowego </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

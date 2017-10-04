@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css"  rel="stylesheet"/>
+    <link href="bootstrap/css/lightbox.css" rel="stylesheet" />
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bootstrap/js/lightbox.js"></script>
+
+    <!--<script src="bower_components/bootstrap/dist/css/bootstrap.css"></script>-->
+
+
+    <script src="js/App.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="MainCtrl">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">Obiekt sportowy</a>
+
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ng-show="authenticated" href="#!/news">Aktualności</a></li>
+            <li><a ng-show="!authenticated" href="#!/news">Aktualności</a></li>
+            <li ><a ng-show="authenticated" href="#!/gallery">Galeria zdjęć</a></li>
+            <li><a ng-show="!authenticated" href="#!/gallery">Galeria zdjęć</a></li>
+            <li ><a ng-show="authenticated" href="#!/scheduled">Terminarz wydarzeń</a></li>
+            <li ><a ng-show="authenticated" href="#!/home">O autorach</a></li>
+            <li ><a ng-show="authenticated" href="#!/contact">Kontakt</a></li>
+
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li ><a ng-show="!authenticated" href="#!/register">Zarejestruj się</a></li>
+            <li ><a ng-show="!authenticated" href="#!/login">Zaloguj się</a></li>
+            <li ng-show="authenticated"  class="dropdown"><a href="#" class="dropdown-toggle"
+                                    data-toggle="dropdown"><span inline="text">Zalogowany użytkownik {{_username}}</span>
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#!/my_profile">Mój profil</a></li>
+                    <li><a ng-show="roleAdmin" href="#!/account_m">Użytkownicy</a></li>
+                    <li><a ng-show="roleAdmin" href="#!/user_notes">Wiadomości</a></li>
+                    <li><a ng-controller="AuthenticatedCtrl" ng-click="logout()"> Logout</a>
+
+                        <form name="logoutForm" action="logout" method="post"
+                              hidden="true">
+                            <input hidden type="submit" value="Sign Out"/>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+<div>
+    <div id="test" ng-view></div>
+</div>
+
+
+<div class="footer navbar-fixed-bottom">
+    <h5 style="text-align:center;">Obiekt sportowy 2017. Kontakt: damianoryks@gmail.com</h5>
+</div>
+
+</body>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+
+<script src="js/controller/MainCtrl.js"></script>
+<script src="js/controller/AuthenticatedCtrl.js"></script>
+<script src="js/service/AuthenticatedService.js"></script>
+<script src="js/controller/RegisterCtrl.js"></script>
+<script src="js/controller/EventCtrl.js"></script>
+<script src="js/controller/AccountCtrl.js"></script>
+<script src="js/controller/UserCtrl.js"></script>
+<script src="js/controller/NoteCtrl.js"></script>
+</html>

@@ -1,0 +1,26 @@
+<div class="container">
+    {{username}}
+    <div class="row">
+        <div
+                class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form class="form-signin"  ng-submit="authenticated()" >
+                <h2 class="form-signin-heading">
+                    Zaloguj się <small>Odkryj nowe możliwości</small>
+                </h2>
+                <input type="text" class="form-control" placeholder="Twoja nazwa użytkownika"
+                       name="username" ng-model="register.username" required/>
+                <hr>
+                <input type="password" class="form-control"
+                       placeholder="Twoje hasło" name="password" ng-model="register.password" required/>
+                <hr class="colorgraph">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Zaloguj się</button>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <a href="index.html" class="btn btn-primary btn-block btn-lg">Wróć do strony głównej</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

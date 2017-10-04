@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 style="color:#5aa0de;"><b>Wiadomości od użytkowników:</b></h2>
+    <table class="table table-hover" style="background-color:white; border-radius: 10px;">
+        <thead>
+        <tr>
+            <th>Tytuł wiadomości:</th>
+            <th>Treść wiadomości:</th>
+            <th>Usunięcie wiadomości</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  ng-repeat="note in notes" ts-repeat>
+            <td>{{note.title}}</td>
+            <td>{{note.text}}</td>
+            <td><input type="submit" class="btn btn-info btn-xs" value="Usuń wiadomość" ng-click="delete(note)"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
